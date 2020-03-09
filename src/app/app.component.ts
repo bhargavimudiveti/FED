@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// import * as data from "./../assets/i18n/en.json";
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FED';
+ public  lang:string;
+  constructor(private translate: TranslateService) {
+    this.lang = 'en';
+    translate.setDefaultLang('en');
+}
+  useLanguage() {
+   this.translate.use(this.lang);
+
+}
 }

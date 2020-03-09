@@ -1,0 +1,12 @@
+<div style="display: flex; flex-direction: row;">
+  <figure style="margin: 5rem;">
+    <img src="assets/image/logo.png" />
+  </figure>
+  <div>
+    <div *ngFor="let item of snippets" style=" display:flex; flex-direction: column; margin: 2rem;">
+      {{item | translate}} </div>
+  </div>
+</div>
+
+
+

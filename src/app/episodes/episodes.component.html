@@ -1,0 +1,29 @@
+<div style="display: flex;">
+  <div style="width: 33%;">
+    <h4> Episodes</h4>
+    <ul>
+      <li *ngFor="let name of episodes">
+        {{name.name | translate}}
+      </li>
+      </ul>
+  </div>
+<div style="width: 33%;">
+<select  [(ngModel)]="selectedValue" (change)="seasonchange()">
+  <option value="1" selected><b>Season1</b></option>
+  <option value="2"><b>Season2</b></option>
+  </select>
+  <ul>
+    <li *ngFor="let name of episodes">
+      {{name.season | translate}}
+    </li>
+    </ul>
+</div>
+<div style="width: 33%;">
+   <h4> <button  (click)="sortBy()"> Rating</button></h4>
+  <ul>
+    <li *ngFor="let name of episodes">
+      {{name.rating | translate}}
+    </li>
+    </ul>
+</div>
+</div>
